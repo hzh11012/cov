@@ -1,17 +1,49 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="//ftp.qnets.cn/cov/favicon.ico">
+  <title>防疫政策查询
+  </title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?aa5721103408867cfa52328665285a09";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+</body>
+<script>
+  fnResize();
+  window.onresize = function () {
+    fnResize();
+  }
+  function fnResize() {
+    var deviceWidth = document.documentElement.clientWidth || window.innerWidth;
+    if (deviceWidth >= 500) {
+      deviceWidth = 500;
+    }
+    if (deviceWidth <= 320) {
+      deviceWidth = 320;
+    }
+    document.documentElement.style.fontSize = (deviceWidth / 7.5) + 'px';
+  }
+</script>
+
 </html>
